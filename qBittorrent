@@ -1,0 +1,16 @@
+#!/bin/sh
+# File Name 'qbit'
+# Place this file into rc.d
+# Edit /etc/rc.conf to include qbittorrent_enable="YES"
+
+. /etc/rc.subr
+
+name="qbittorrent"
+desc="Web Gui qBittorrent-nox"
+#rcvar=qbittorrent-nox_enable
+start_cmd="/usr/local/bin/qbittorrent-nox -d"
+stop_cmd=":"
+
+PATH="$PATH:/usr/local/bin"
+
+run_rc_command "$1"
